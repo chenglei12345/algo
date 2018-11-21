@@ -77,7 +77,6 @@ function compute(&$numStack, &$operStack){
         case '-':
             array_push($numStack, array_pop($numStack) - $num);
             break;
-
         case '(':
             throw new \Exception("不匹配的(", 2);
             break;
