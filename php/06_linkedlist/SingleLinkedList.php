@@ -288,5 +288,6 @@ class SingleLinkedList
         $this->insertNodeAfter($node6, $node7);
 
         $node7->next = $node4;
+        var_dump($this);
     }
 }

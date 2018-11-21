@@ -23,20 +23,22 @@ function partition(&$a, $l, $r): int
 
     for ($j = $l; $j < $r; ++$j) {
         if ($a[$j] < $pivot) {
-            [$a[$j], $a[$i]] = [$a[$i], $a[$j]];
+            list($a[$j], $a[$i]) = [$a[$i], $a[$j]];
             ++$i;
-      }
+        }
     }
 
-    [$a[$r], $a[$i]] = [$a[$i], $a[$r]];
+    list($a[$r], $a[$i]) = [$a[$i], $a[$r]];
 
     return $i;
 }
+
 
 $a1 = [1,4,6,2,3,5,4];
 $a2 = [2, 2, 2, 2];
 $a3 = [4, 3, 2, 1];
 $a4 = [5, -1, 9, 3, 7, 8, 3, -2, 9];
+
 quickSort($a1);
 print_r($a1);
 quickSort($a2);

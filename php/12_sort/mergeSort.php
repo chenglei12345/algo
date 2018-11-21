@@ -1,12 +1,12 @@
 <?php
 
-    $arr = [4, 5, 6, 1, 3, 2];
+    $arr = [11, 8, 3, 9, 7, 1,2];
     $length = count($arr);
 
     $p = 0;
     $r = $length - 1;
 
-    $result = $this->mergeSort($arr, $p, $r);
+    $result = mergeSort($arr, $p, $r);
 
     var_dump($result);
 
@@ -19,9 +19,9 @@ function mergeSort(array $arr, $p, $r)
     }
     $q = (int)(($p + $r) / 2);
 
-    $left = $this->mergeSort($arr, $p, $q);
-    $right = $this->mergeSort($arr, $q + 1, $r);
-    return $this->merge($left, $right);
+    $left = mergeSort($arr, $p, $q);
+    $right = mergeSort($arr, $q + 1, $r);
+    return merge($left, $right);
 }
 
 //合并

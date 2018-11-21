@@ -57,8 +57,10 @@ $list = new SingleLinkedList();
 $list->insert('a');
 $list->insert('b');
 $list->insert('c');
-$list->insert('c');
-$list->insert('b');
-$list->insert('a');
+var_dump($list->buildHasCircleList());die;
+$list->insert('c1');
+$list->insert('b1');
+$list->insert('a1');
 
+var_dump($list);die;
 var_dump(isPalindrome($list));
